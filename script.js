@@ -1,11 +1,7 @@
-// Assignment code here
-// prompt user for password length
-// go to shop between battles function
-
-var lowerCase = 'abcdefghijklmnopqrstuvwxyz';
-var upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-var numbers = '0123456789';
-var special = '!@#$%^&*~';
+var lowerCase = 'abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz';
+var upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ';
+var numbers = '01234567890123456789012345678901234567890123456789';
+var special = '!@#$%^&*~!@#$%^&*~!@#$%^&*~!@#$%^&*~!@#$%^&*~!@#$%^&*~';
 
 passwordAttributes = [];
 
@@ -42,18 +38,12 @@ switch(specialPrompt) {
     passwordAttributes.push(special);
 }
 
-
-console.log (passwordAttributes);
-
 function generatePassword(length) {
   var result = '';
   while (result.length < length) {
   var randomAttribute = passwordAttributes[(Math.floor(Math.random() * passwordAttributes.length))]
   result += randomAttribute.charAt((Math.floor(Math.random() * randomAttribute.length)))};
-
   return result;}
-
-console.log (generatePassword(length));
 
 var password = generatePassword(length);
 
