@@ -5,10 +5,10 @@ var special = '!@#$%^&*~!@#$%^&*~!@#$%^&*~!@#$%^&*~!@#$%^&*~!@#$%^&*~';
 
 passwordAttributes = [];
 
-var length = prompt("choose the length of your password (between 8 and 128 characters)");
+var length = prompt("Choose the length of your password (enter a number between 8 and 128)");
 console.log (length);
 
-var lowerCasePrompt = prompt("do you want lower case letters in your password? yes/no")
+var lowerCasePrompt = prompt("Do you want lower case letters in your password? yes/no")
 switch(lowerCasePrompt) {
   case "yes":
     passwordAttributes.push(lowerCase);
@@ -17,7 +17,7 @@ switch(lowerCasePrompt) {
     break;
 }
 
-var upperCasePrompt = prompt("do you want upper case letters in your password? yes/no")
+var upperCasePrompt = prompt("Do you want upper case letters in your password? yes/no")
 switch(upperCasePrompt) {
   case "yes":
     passwordAttributes.push(upperCase);
@@ -26,13 +26,13 @@ switch(upperCasePrompt) {
     break;
 }
 
-var numbersPrompt = prompt("do you want numbers in your password? yes/no")
+var numbersPrompt = prompt("Do you want numbers in your password? yes/no")
 switch(numbersPrompt) {
   case "yes":
     passwordAttributes.push(numbers);
 }
 
-var specialPrompt = prompt("do you want special characters in your password? yes/no")
+var specialPrompt = prompt("Do you want special characters in your password? yes/no")
 switch(specialPrompt) {
   case "yes":
     passwordAttributes.push(special);
