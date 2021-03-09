@@ -9,7 +9,7 @@ var length = prompt("Choose the length of your password (enter a number between 
 console.log (length);
 
 var lowerCasePrompt = prompt("Do you want lower case letters in your password? yes/no")
-switch(lowerCasePrompt) {
+switch(lowerCasePrompt.toLowerCase()) {
   case "yes":
     passwordAttributes.push(lowerCase);
     break;
@@ -18,7 +18,7 @@ switch(lowerCasePrompt) {
 }
 
 var upperCasePrompt = prompt("Do you want upper case letters in your password? yes/no")
-switch(upperCasePrompt) {
+switch(upperCasePrompt.toLowerCase()) {
   case "yes":
     passwordAttributes.push(upperCase);
     break;
@@ -27,15 +27,19 @@ switch(upperCasePrompt) {
 }
 
 var numbersPrompt = prompt("Do you want numbers in your password? yes/no")
-switch(numbersPrompt) {
+switch(numbersPrompt.toLowerCase()) {
   case "yes":
     passwordAttributes.push(numbers);
+  case "no":
+    break;
 }
 
 var specialPrompt = prompt("Do you want special characters in your password? yes/no")
-switch(specialPrompt) {
+switch(specialPrompt.toLowerCase()) {
   case "yes":
     passwordAttributes.push(special);
+  case "no":
+    break;
 }
 
 function generatePassword(length) {
